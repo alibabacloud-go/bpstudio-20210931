@@ -1162,9 +1162,9 @@ type ListApplicationResponseBody struct {
 	Code       *int32                             `json:"Code,omitempty" xml:"Code,omitempty"`
 	Data       []*ListApplicationResponseBodyData `json:"Data,omitempty" xml:"Data,omitempty" type:"Repeated"`
 	Message    *string                            `json:"Message,omitempty" xml:"Message,omitempty"`
-	NextToken  *int32                             `json:"NextToken,omitempty" xml:"NextToken,omitempty"`
+	NextToken  *string                            `json:"NextToken,omitempty" xml:"NextToken,omitempty"`
 	RequestId  *string                            `json:"RequestId,omitempty" xml:"RequestId,omitempty"`
-	TotalCount *int32                             `json:"TotalCount,omitempty" xml:"TotalCount,omitempty"`
+	TotalCount *string                            `json:"TotalCount,omitempty" xml:"TotalCount,omitempty"`
 }
 
 func (s ListApplicationResponseBody) String() string {
@@ -1190,7 +1190,7 @@ func (s *ListApplicationResponseBody) SetMessage(v string) *ListApplicationRespo
 	return s
 }
 
-func (s *ListApplicationResponseBody) SetNextToken(v int32) *ListApplicationResponseBody {
+func (s *ListApplicationResponseBody) SetNextToken(v string) *ListApplicationResponseBody {
 	s.NextToken = &v
 	return s
 }
@@ -1200,7 +1200,7 @@ func (s *ListApplicationResponseBody) SetRequestId(v string) *ListApplicationRes
 	return s
 }
 
-func (s *ListApplicationResponseBody) SetTotalCount(v int32) *ListApplicationResponseBody {
+func (s *ListApplicationResponseBody) SetTotalCount(v string) *ListApplicationResponseBody {
 	s.TotalCount = &v
 	return s
 }
@@ -1217,7 +1217,7 @@ type ListApplicationResponseBodyData struct {
 	// 应用的资源组
 	ResourceGroupId *string `json:"ResourceGroupId,omitempty" xml:"ResourceGroupId,omitempty"`
 	// 应用的状态
-	Status *int32 `json:"Status,omitempty" xml:"Status,omitempty"`
+	Status *string `json:"Status,omitempty" xml:"Status,omitempty"`
 	// 应用的拓扑图链接
 	TopoURL *string `json:"TopoURL,omitempty" xml:"TopoURL,omitempty"`
 }
@@ -1255,7 +1255,7 @@ func (s *ListApplicationResponseBodyData) SetResourceGroupId(v string) *ListAppl
 	return s
 }
 
-func (s *ListApplicationResponseBodyData) SetStatus(v int32) *ListApplicationResponseBodyData {
+func (s *ListApplicationResponseBodyData) SetStatus(v string) *ListApplicationResponseBodyData {
 	s.Status = &v
 	return s
 }
